@@ -9,8 +9,8 @@ const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
 
 function App() {
   const [SearchInput, setSearchInput] = useState("");
-  const [accessToken, setAccessToken] = useState([]);
-  const [albums, setAlbums] = useState("");
+  const [accessToken, setAccessToken] = useState("");
+  const [albums, setAlbums] = useState([]);
 
 
   useEffect(() => {
@@ -52,6 +52,7 @@ function App() {
   return (
     <div className="App">
       <Container>
+      <h1 class="display-4">Welcome To The Spotify Recommendations Generator!</h1>
         <InputGroup className='mb-3' size='lg'>
           <FormControl
           placeholder='Search For Artist'
