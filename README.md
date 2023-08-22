@@ -1,10 +1,9 @@
 # Spotify Music Recommendation Generator
 
-App takes in upto 5 seed artists and upto 5 seed tracks and ouputs between 1-100 recommended tracks to listen to.
-Utilizes the Spotify API
+App takes in upto 5 seed artists and upto 5 seed tracks and ouputs between 1-50 recommended tracks to listen to.
+Utilizes the Spotify API. Built using React.js.
 
 TO BE CONTINUED
-
 ## Available Scripts
 
 In the project directory, you can run:
