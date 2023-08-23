@@ -68,6 +68,7 @@ function App() {
       .then(response => response.json())
       .then(data => { setGeneratedSongs(data.tracks) })
 
+      console.log(GeneratedSongs)
   }
 
   //Converts artist ID's into single string seperated by commas (%2C)
@@ -117,7 +118,9 @@ function App() {
 
 
   return (
+    
     <div className='App' >
+      
       <Container>
         <h1 style={{ color: '#1DB954', font: 'Helvetica' }}>Welcome To The Spotify Recommendations Generator!
         </h1>
@@ -134,7 +137,9 @@ function App() {
                   type='input'
                   onChange={event => setRangeInput(event.target.value)}
                 />
-                <Button style={{ color: '#FFFFFF', font: 'Arial', backgroundColor: '#1DB954' }}>
+                
+                <Button style={{ color: '#FFFFFF', font: 'Arial', backgroundColor: '#1DB954' }}
+                data-bs-toggle="popover" title="Popover title" data-bs-content="Here's some amazing content.">
                   Submit
                 </Button>
               </InputGroup>
@@ -182,16 +187,20 @@ function App() {
               </Button>
             </Row>
           </div>
-          <div class="col-sm">
+          <div class="col-sm right">
             <Row className='mx-2 row row-cols-1'>
               {GeneratedSongs.map((song, i) => {
                 return (
-                  <Card>
-                    <Card.Img src={song.album.images[0].url} />
-                    <Card.Body>
-                      <Card.Title>{song.name}</Card.Title>
-                    </Card.Body>
-                  </Card>
+                  <div className='card' style={{ backgroundColor: '#111'}}>
+                  <div className='img-holder'>
+                    <img src={song.album.images[0].url} alt =''></img>
+                  </div>
+                  <div class ='text'>
+                    <h2>{song.name}</h2>
+                    <p>{song.album.artists[0].name}</p>
+                  </div>
+                  
+                </div>
                 )
               })}
             </Row>
@@ -200,7 +209,25 @@ function App() {
       </Container>
     </div>
   );
-
 }
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 export default App;
