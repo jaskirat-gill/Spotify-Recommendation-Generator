@@ -3,6 +3,7 @@
 App takes in upto 5 seed artists and upto 5 seed tracks and ouputs between 1-50 recommended tracks to listen to.
 Utilizes the Spotify API. Built using React.js.
 
+Deployed to Netlify, viewable at jaskirat-gill-spotify.netlify.app
 TO BE CONTINUED
 ## Available Scripts
 

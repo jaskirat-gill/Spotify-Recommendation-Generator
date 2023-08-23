@@ -1,7 +1,7 @@
 {
   "name": "client",
+  "homepage": "/",
   "version": "0.1.0",
-  "homepage": "https://jaskirat-gill.github.io/Spotify-Recommendation-Generator",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
